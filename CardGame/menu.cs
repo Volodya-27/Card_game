@@ -16,7 +16,7 @@ namespace CardGame
             {
                 game.Add_Card();
                 game.add_cards_player();
-                game.foo();
+                game.Game_Proces();
                 game.show();
             }
 

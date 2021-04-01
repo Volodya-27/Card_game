@@ -9,6 +9,11 @@ namespace CardGame
 {
     class Game
     {
+        //поняв шо у мене проблеми з солід тут можна було під карти зробити окремий клас колода
+        //який би мав масив цих карт 
+        //під масив іграків зробити клас іграки....
+
+
         private string[] arr_card = { "6", "7", "8", "9", "10", "B", "D", "K", "T" };
         private static Random random = new Random();
         private List<Player> players = new List<Player>();
@@ -36,16 +41,6 @@ namespace CardGame
                 }
             }
             arr1[0] = 0; //невеличикий костиль мусів так зробити бо інакше при генерації бувало шо 0 і 1 карта одинакові
-            //for (int i = 0; i < carder.Count; i++)
-            //{
-            //    for (int r = i + 1; r < carder.Count; r++)
-            //    {
-            //        if (arr1[r] == arr1[i])
-            //        {
-            //            Console.WriteLine($"ERORrrrrr{arr1[r]}");
-            //        }
-            //    }
-            //}
         }
         private char Generating_trump_card()
         {
@@ -248,15 +243,15 @@ namespace CardGame
                 for (int u = 0; u < 6; u++)
                 {
                     players[i].cards.Add(carder[arr1[0]]);
-                    //carder.Remove(carder[arr1[u]]);
+                    
                     delete();
                 }
             }
-            //очищуємо масив карт які вже роздали 
+           
         }
 
 
-        public void foo()
+        public void Game_Proces()
         {
             while(arr1.Length!=0)
             {
